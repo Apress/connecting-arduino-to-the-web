@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>lights</title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>SENDING DATA</h1>
+        <h2>Getting data from the front end to an Arduino</h2>
+    </header>
+    <div id="content">
+        <div class="container">
+            <div id="red-block" class="color-block"></div>
+            <div id="green-block" class="color-block"></div>
+            <div class="text-block">
+                <p>Pressing a button will send data to a connected Arduino.</p>
+
+                <p>This data will determine which LED is turned on or off.</p>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="javascript/main.js"></script>
+</body>
+</html>

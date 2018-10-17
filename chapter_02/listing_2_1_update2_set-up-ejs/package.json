@@ -1,0 +1,15 @@
+{
+  "name": "set-up-routes",
+  "version": "1.0.0",
+  "description": "setting up simple routes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Indira",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
+  }
+}

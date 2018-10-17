@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding:0;
+}
+body{
+	background-color: #F2F3F4;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+}
+
+h1, h2, p{
+	padding: 10px;
+}
+
+h1{
+	background-color: #4ABCAC;
+	color: white;
+}
+
+#components{
+	margin: 10px;
+	border: #F78733 solid 2px;
+	display: inline-block;
+}

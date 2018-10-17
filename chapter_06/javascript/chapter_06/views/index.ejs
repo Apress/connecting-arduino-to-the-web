@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>data</title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>EVENT METRICS</h1>
+        <h2>getting information through an Arduino</h2>
+    </header>
+    
+    <div id="content">
+        <h2>AT TONIGHTS EVENT DID YOU ...</H2>
+        <p>Answer the questions by turning the knobs, to submit your answer press the button.</p>
+        <div id="bar-A0" class="container">
+            <div  class="bar">
+                <p>talk to someone new?</p>
+                <div class="response-container">
+                    <p class="flex-item">not really</p>
+                    <p class="flex-item">loads</p>
+                </div>
+                <svg width="400" height="20" viewBox="0 0 400 20">
+                    <rect id="A0"
+                    x="0"
+                    y="0"
+                    fill="#6BCAE2"
+                    width="320"
+                    height="20"/>
+                </svg>
+            </div>
+            <div class="text-block">
+                <h3>Current Input<h3>
+                <p></p>
+            </div>
+            <div class="text-block-response hidden">
+                <h3>Thanks<h3>
+            </div>
+        </div>
+
+        <div id="bar-A1" class="container">
+            <div  class="bar">
+                <p>find out something new new?</p>
+                <div class="response-container">
+                    <p class="flex-item">not really</p>
+                    <p class="flex-item">loads</p>
+                </div>
+                <svg width="400" height="20" viewBox="0 0 400 20">
+                    <rect id="A1"
+                    x="0"
+                    y="0"
+                    fill="#6BCAE2"
+                    width="320"
+                    height="20"/>
+                </svg>
+            </div>
+            <div class="text-block">
+                <h3>Current Input<h3>
+                <p></p>
+            </div>
+            <div class="text-block-response hidden">
+                <h3>Thanks<h3>
+                <p></p>
+            </div>
+        </div>
+
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="javascript/main.js"></script>
+</body>
+</html>

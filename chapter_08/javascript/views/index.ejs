@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>SENSOR DASHBOARD</h1>
+        <h2>temperature humidity light</h2>
+        <h3><time id="date"></time></h3>
+    </header>
+
+    <main>
+        <h3>current values</h3>
+        <div class="container">
+
+            <div id="donut1" class="donut flex-child">
+       
+            </div>
+            <div id="donut2" class="donut flex-child">
+           
+            </div>
+            <div id="donut3" class="donut flex-child">
+        
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="temp" class="high-low">
+                <div class="high">
+                    <p>today's high</p>
+                    <p><span id="temp-high">27</span>&deg;C</p>
+                </div>
+                <div class="low">
+                    <p>today's low</p>
+                    <p><span id="temp-low">27</span>&deg;C</p>
+                </div>
+            </div>
+            <div id="humidity" class="high-low">
+                <div class="high">
+                    <p>today's high</p>
+                    <p><span id="humidity-high">27</span>%</p>
+                </div>
+                <div class="low">
+                    <p>today's low</p>
+                    <p><span id="humidity-low">27</span>%</p>
+                </div>
+            </div>
+
+            <div id="light" class="high-low">
+                <div class="high">
+                    <p>today's high</p>
+                    <p><span id="light-high">27</span></p>
+                </div>
+                <div class="low">
+                    <p>today's low</p>
+                    <p><span id="light-low">27</span></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script> 
+    <script src="javascript/donut.js"></script>
+    <script src="javascript/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<head>
+	<title>an ejs page</title>
+	<link href="/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<h1>EJS</h1>
+	<p>This page is an ejs page and will show data from the server</p>
+
+	<h2><%= title %></h2>
+
+	<div id="components">
+		<% components.forEach(function(component) { %>
+			<p>component: <%= component %> </p>
+		<% }); %>
+	</div>
+
+</body>
+</html>

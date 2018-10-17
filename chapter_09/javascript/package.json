@@ -1,0 +1,16 @@
+{
+  "name": "chapter_09",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "request": "^2.83.0",
+    "serialport": "^4.0.7"
+  }
+}

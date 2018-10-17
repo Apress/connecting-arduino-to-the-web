@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>D3.js</title>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.js"></script>
+
+    <style type="text/css">
+        body{
+            font-family: arial;
+        }
+        h1{
+            font-size: 22px;
+           margin: 0px;
+        }
+        h2{
+            font-size: 16px;
+            margin: 0px;
+            margin-top: 2px; 
+        }
+        .axis text {
+            font-family: arial;
+            font-size: 12px;
+            font-weight: normal;
+            color: pink;
+        }
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+        .bar {
+            fill: #fd8f00;
+       }
+       h1, h2, p{
+          margin-left: 40px;
+      }
+      p{
+         font-size: 12px;
+      }
+  </style>
+</head>
+<body>
+  <h1>A D3 bar chart</h1>
+  <div id = "viz"></div>
+
+  <script type="text/javascript">
+      var margin = {top: 20, right: 20, bottom: 40, left: 40};
+      var width = 480 - margin.left - margin.right;
+      var height = 500 - margin.top - margin.bottom;
+
+      var data = [
+        {"amount": 5, "name": "column1"},
+        {"amount": 11, "name": "column2"},
+        {"amount": 55, "name": "column3"},
+        {"amount": 23, "name": "column4"}
+      ]
+
+        var x = d3.scaleBand()
+        .domain(data.map(function(d) { return d.name; }))
+        .range([0, width], .1)
+        .padding(0.1);
+
+        var y = d3.scaleLinear()
+        .domain([0, d3.max(data, function(d) { return +d.amount; })])
+        .range([height, 0]);
+
+        var dataviz = d3.select("#viz").append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        dataviz.selectAll(".bar")
+          .data(data)
+        .enter()
+          .append("rect")
+          .attr("class", "bar")
+          .attr("x", function(d) { return x(d.name); })
+          .attr("width", x.bandwidth())
+          .attr("y", function(d) { return y(+d.amount); })
+          .attr("height", function(d) { return height - y(+d.amount); });
+
+          dataviz.append("g")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x));
+          dataviz.append("g")
+          .call(d3.axisLeft(y));
+     </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body { 
+    margin: 0; 
+}
+canvas { 
+    width: 100%; 
+    height: 100% 
+}
+
+body { 
+    font-family: Verdana, Arial, sans-serif; 
+}
+canvas { 
+    width: 100%; height: 100% 
+    z-index: -1;
+}
+#start{
+    position: absolute;
+    left: 30;
+    top: 40;
+    color: white;
+    cursor: pointer;
+    background: red;
+    z-index: 10;
+}
+
+#start h1{
+    padding: 6px;
+}
+#score{
+    position: absolute;
+    left: 30;
+    top: 10;
+    color: white;
+    width: 200px;
+    height: 120px;
+}
+#score h1{
+    font-size: 16px;
+}
+
+#again{
+    position: absolute;
+    left: 30;
+    top: 40;
+    color: white; 
+    cursor: pointer;
+    z-index: 10;           
+}
+
+#again h2{
+    margin-top: 4px;
+}
+
+#replay{
+    cursor: pointer;
+    z-index: 11;
+    background: red;
+}
+.hidden{
+    visibility: hidden;
+}

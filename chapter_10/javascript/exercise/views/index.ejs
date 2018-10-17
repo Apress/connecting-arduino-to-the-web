@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>three.js game</title>
+        <link href="/css/main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+    <div id = "again" class="hidden">
+        <h1>you scored <span id="current-score"></span></h1>
+        <h2 id="replay">PLAY AGAIN</h2>
+    </div>
+    <div id="start">
+        <h1>start game</h1>
+    </div>
+
+    <div id="score">
+        <h1>points: <span id="points"></span></h1>
+        <div id="timer">
+            <h1 id="countdown"><time></time></h1>
+        </timer>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.js"></script>
+    
+    <script src="javascript/Points.js"></script>
+    <script src="javascript/Countdown.js"></script>
+    <script src="javascript/Game.js"></script>
+    <script src="javascript/main.js"></script>
+
+    </body>
+</html>

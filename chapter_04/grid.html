@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .wrapper > div {
+     background-color: YellowGreen;
+     text-align: center;
+     color: white;
+     line-height: auto;
+     font-weight: bold;
+     font-size: 32px;
+     padding-top: 20px;
+    }
+    .wrapper {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 5px;
+     grid-auto-rows: 100px;
+    }
+    .one {
+     grid-column: 1 / 4;
+     grid-row: 1;
+    }
+    .two { 
+     grid-column: 2 / 4;
+     grid-row: 2 / 4;
+    }
+    .three {
+     grid-column: 1;
+     grid-row: 2 / 5;
+    }
+    .four {
+     grid-column: 3;
+     grid-row: 4;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="one">One</div>
+  <div class="two">Two</div>
+  <div class="three">Three</div>
+  <div class="four">Four</div>
+</div>
+
+</body>
+</html>

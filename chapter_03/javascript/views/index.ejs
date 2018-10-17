@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="UTF-8">
+	<title>Get data</title>
+</head>
+<body>
+	<h1>Arduino data</h1>
+	<p>Press the button on the Arduino to change the color of the square</p>
+	<p>The button is <span id="button-state"></span> being pressed</p>
+
+	<svg width="120" height="120" viewBox="0 0 120 120">
+		<rect id="change-color"
+		fill="LightSkyBlue"
+		width="120"
+		height="120"
+		/>
+	</svg>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+	
+		var socket = io();
+
+		var current = "0";
+		var shape = document.getElementById('change-color');
+		var buttonState = document.getElementById('button-state');
+		var colorArray = ["LightSkyBlue", "LightSlateGray","DarkOliveGreen", "orange", "DarkRed", "gold", "blue", "yello" ];
+
+
+		socket.on("data", function(data){
+			if(data === "1"){
+				buttonState.innerHTML = "pressed";
+				if(data !== current){
+					var newColor = colorArray[Math.floor(Math.random()*colorArray.length)];
+					shape.style.fill = newColor;
+				}
+			} else{
+				buttonState.innerHTML = "not pressed";
+			}
+			current = data;
+
+		});
+	</script>
+
+</body>
+</html>
